@@ -252,7 +252,15 @@ section {
   font-weight: 900;
   margin-bottom: 18px;
 }
-
+/* services */
+.services{
+  background-color: #0f4bf2;
+}
+.services .nav-item a{
+  border: #0cda0c 2px solid;
+  text-align: center;
+  margin: 10px 0;
+}
 /*why us section*/
 .why-us .content {
   padding: 60px 100px 0 100px;
@@ -300,11 +308,6 @@ section {
 }
 }
 
-/* Services*/
-.services{
-  background: white;
-  color: #070706;
-}
 
 /* portfolio */
 .portfolio .card{
