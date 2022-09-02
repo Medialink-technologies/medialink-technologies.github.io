@@ -32,7 +32,7 @@ section {
 /* header */
 #header {
   padding: 15px 0;
-  background: linear-gradient(to right, rgb(7, 146, 137),rgb(78, 156, 30), rgb(19, 224, 159));
+  background:rgba(0, 128, 0, 0.642);
 }
 
 #header .logo {
@@ -145,8 +145,35 @@ section {
   background:linear-gradient(45deg, rgba(54, 49, 80, .8) 0%, rgba(42, 36, 48, .7) 100%),url('../img/bgs/hero-bg.jpg') fixed;
   background-size: cover;
   background-position: center center;
-  
+  text-align: left !important; 
 }
+#hero .animate{
+  margin-top: 60px;
+  animation: up-down 8s ease-in-out infinite alternate-reverse both;
+}
+#hero .animate:hover{
+  margin-top: 60px;
+  animation: none 2s;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(100px) scale(.5);
+  }
+  100% {
+    transform: translateY(-10px) rotate(360deg);
+  }
+}
+
 #hero .content{
   padding-top: 72px;
   color: rgb(146, 133, 67);
@@ -193,6 +220,9 @@ section {
     height: 100vh;
     text-align: center;
   }
+  #hero .animate{
+  display: none;
+  }
 
 }
 
@@ -209,8 +239,11 @@ section {
  }
 
 @media (max-width: 576px) {
+  #hero{
+    text-align: center !important;
+  }
   #header .logo a{
-  font-size: .7rem;
+  font-size: 1.2rem;
 
   font-weight: 700;
   
@@ -222,6 +255,10 @@ section {
   }
 
 /* About section*/
+.about{
+  background-color: wheat;
+  color: #0cda0c;
+}
 .about h3{
   text-decoration: underline;
   text-transform: uppercase;
@@ -254,12 +291,19 @@ section {
 }
 /* services */
 .services{
-  background-color: #0f4bf2;
+  background: rgba(231, 231, 8, 0.192);
+  color: #0f1617;
 }
 .services .nav-item a{
+  color: red;
   border: #0cda0c 2px solid;
   text-align: center;
   margin: 10px 0;
+}
+.services .tab-content h3{
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #0f4bf2;
 }
 /*why us section*/
 .why-us .content {
@@ -377,7 +421,41 @@ section {
   border-radius: 50%;
 
   }
-
+@media(max-width: 576px){
+  .cta {
+  background: linear-gradient(rgba(18, 18, 19, 0.8), rgba(11, 11, 11, 0.8)), url("../img/bgs/cta.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 10px;
+  text-align: center;
+}
+.cta h3 {
+  color: #fff;
+  line-height: 200%;
+  font-size:18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.cta p {
+  color: #fff;
+}
+.cta .cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 40px 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.cta .cta-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+}
+}
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);
